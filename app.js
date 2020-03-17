@@ -37,6 +37,7 @@ type User {
     _id:ID!
     email:String!
     password:String!
+    createdEvents:[Event!]
 }
 
 input UserInput{
@@ -83,8 +84,7 @@ schema {
         users:async()=>{
             let users = await User.find().populate('createdEvents')
             return users.map(elements =>{
-                
-                return elements
+                    return elements
             })
         }
     
