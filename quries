@@ -1,0 +1,83 @@
+
+
+# mutation{
+  
+#   createEvent(eventInput:{title:"test3", description: "ahmed", price: 123, date: "2020-03-17T06:25:11.550Z"})
+#   {title,description,_id,price,date}
+# }
+# # # # ,
+
+# query{
+#   events
+#   {
+#   	# title
+#   	# _id
+#   	# description
+#   	# date
+#   	# price
+#     creator{
+#       email
+#     }
+#   }
+# }
+
+
+# mutation{
+#   createUser(userInput:{email:"test3@gmail.com",password:"maqsood123"})
+# ,{email,password}
+# }
+
+
+
+# query{
+#   users{
+#     email
+    
+#       createdEvents{
+        
+#       }
+    
+#   }
+		
+# }
+
+# query{
+#   users{
+#     email
+#     createdEvents{_id
+#     title}
+#   }
+# }
+
+
+
+# query queryEvents{
+#   events{
+#    createdEvents{
+#     title
+#   }
+#   }
+# }
+
+
+query {
+  users{
+    _id
+    createdEvents{
+      title
+      _id
+      description
+      date
+      price
+      creator{
+      _id
+      }
+       
+        
+      
+    }
+  }
+}
+
+
+
